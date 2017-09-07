@@ -153,8 +153,8 @@
 <script>
 "use strict";
 
-var PDFJS = require('pdfjs-dist/webpack.js');
-var resizeSensor = require('vue-resize-sensor');
+import PDFJS from 'pdfjs-dist/webpack.js';
+import resizeSensor from 'vue-resize-sensor';
 
 function PDFJSWrapper(PDFJS, canvasElt, annotationLayerElt, emitEvent) {
 	
@@ -428,7 +428,7 @@ function PDFJSWrapper(PDFJS, canvasElt, annotationLayerElt, emitEvent) {
 	PDFJS.CustomStyle.setProp('transform-origin', annotationLayerElt, '0 0');
 }
 
-module.exports = {
+export default {
 	components: {
 		'resize-sensor': resizeSensor,
 	},
@@ -510,5 +510,4 @@ module.exports = {
 		this.pdf.destroy();
 	}
 }
-
 </script>
