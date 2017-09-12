@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/FranckFreiburger/vue-pdf#readme",
   "dependencies": {
-    "pdfjs-dist": "^1.7.418",
-    "vue-resize-sensor": "git+https://github.com/avrelaun/vue-resize-sensor.git#v1.1.1-bk.1"
+    "pdfjs-dist": "^1.7.418"
   }
 }

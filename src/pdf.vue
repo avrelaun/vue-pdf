@@ -1,5 +1,5 @@
 <template>
-	<div style="position: relative"><canvas style="width: 100%; display: block"></canvas><div class="annotationLayer"></div><resize-sensor @resize="resize"></resize-sensor></div>
+	<div style="position: relative"><canvas style="width: 100%; display: block"></canvas><div class="annotationLayer"></div></div>
 </template>
 
 <style>
@@ -153,8 +153,7 @@
 <script>
 "use strict";
 
-import PDFJS from 'pdfjs-dist/webpack.js';
-import resizeSensor from 'vue-resize-sensor';
+const PDFJS = require('pdfjs-dist/webpack.js');
 
 function PDFJSWrapper(PDFJS, canvasElt, annotationLayerElt, emitEvent) {
 	
@@ -428,10 +427,7 @@ function PDFJSWrapper(PDFJS, canvasElt, annotationLayerElt, emitEvent) {
 	PDFJS.CustomStyle.setProp('transform-origin', annotationLayerElt, '0 0');
 }
 
-export default {
-	components: {
-		'resize-sensor': resizeSensor,
-	},
+module.exports = {
 	props: {
 		src: {
 			type: [String, Object],
